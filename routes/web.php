@@ -19,3 +19,10 @@ $router->post("/register", "AuthController@register");
 $router->post("/login", "AuthController@login");
 
 $router->get("/user", "UserController@index");
+
+//product
+$router->get('/product', 'ProductController@index');
+$router->get('/product/{id}', 'ProductController@show');
+$router->post('/product/save', 'ProductController@store');
+$router->post('/product/{id}/update', 'ProductController@update');
+$router->post('/product/{id}/delete', 'ProductController@destroy');
